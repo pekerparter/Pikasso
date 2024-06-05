@@ -1,0 +1,110 @@
+import time
+
+import selenium
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver_instance = Service(executable_path="C:/Users/empty/Downloads/chromedriver-win64/chromedriver.exe")
+browser_instance = webdriver.Chrome(service=driver_instance)
+
+
+#browser_instance.get("https://localhost:44374/Yeni%20klas%C3%B6r/frontend-rneklibrary-jssizkod/index.aspx")
+#element_to_wait = WebDriverWait(browser_instance,10).until(EC.visibility_of_element_located((By.XPATH,"//a[normalize-space()='Login']")))
+#element_to_click = browser_instance.find_element(By.XPATH,"//a[normalize-space()='Login']")
+#element_to_click.click()
+
+
+#browser_instance.get("https://localhost:44374/Yeni%20klas%C3%B6r/test_login.aspx")
+#userName=browser_instance.find_element(By.XPATH,"//input[@id='txtUsername']")
+#userName.send_keys("berkaykar")
+
+#password=browser_instance.find_element(By.XPATH,"//input[@id='txtPassword']")
+#password.send_keys("berkay12345")
+
+#click = browser_instance.find_element(By.XPATH,"//button[@id='btnLogin']")
+#click.click()
+
+#browser_instance.get("https://localhost:44374/Yeni%20klas%C3%B6r/test_login.aspx")
+#element_to_wait = WebDriverWait(browser_instance,10).until(EC.visibility_of_element_located((By.XPATH,"//a[normalize-space()='Create an Account?']")))
+#element_to_click = browser_instance.find_element(By.XPATH,"//a[normalize-space()='Create an Account?']")
+#element_to_click.click()
+
+browser_instance.get("https://localhost:44374/Yeni%20klas%C3%B6r/test_register.aspx")
+userName=browser_instance.find_element(By.XPATH,"//input[@id='txtUsername']")
+userName.send_keys("HassanFaour")
+
+firstName=browser_instance.find_element(By.XPATH,"//input[@id='txtName']")
+firstName.send_keys("Hassan")
+
+lastName=browser_instance.find_element(By.XPATH,"//input[@id='txtSurname']")
+lastName.send_keys("Faour")
+
+mail=browser_instance.find_element(By.XPATH,"//input[@id='txtMail']")
+mail.send_keys("hassan.com")
+
+password=browser_instance.find_element(By.XPATH,"//input[@id='txtPassword']")
+password.send_keys("hassan12345")
+
+passwordCheck=browser_instance.find_element(By.XPATH,"//input[@id='txtPasswordcheck']")
+passwordCheck.send_keys("hassan12345")
+ 
+time.sleep(5)
+clickSignup = browser_instance.find_element(By.XPATH,"//button[@id='btnSignUp']")
+clickSignup.click()
+
+#browser_instance.get("https://localhost:44374/Yeni%20klas%C3%B6r/frontend-rneklibrary-jssizkod/index.aspx")
+#clickBook = browser_instance.find_element(By.XPATH,"//div[@data-name='Suç ve Ceza']//img[@alt='Kitap Resmi']")
+#clickBook.is_enabled()
+#time.sleep(5)
+
+
+#element_to_wait2 = WebDriverWait(browser_instance,10).until(EC.visibility_of_element_located((By.XPATH,"//button[@id='suc']//a[normalize-space()='BUY']")))
+#clickAdd = browser_instance.find_element(By.XPATH,"//button[@id='suc']//a[normalize-space()='BUY']")
+#clickAdd.click()
+
+
+
+#element_to_wait4 = WebDriverWait(browser_instance,10).until(EC.visibility_of_element_located((By.XPATH,"//button[@id='btnAddToCart']")))
+#clickAddCart = browser_instance.find_element(By.XPATH,"//button[@id='btnAddToCart']")
+#clickAddCart.click()
+#time.sleep(10)
+#clickAgain = browser_instance.find_element(By.XPATH,"//button[@id='btnAddToCart']")
+#clickAgain.click()
+
+#clickShopping = browser_instance.find_element(By.XPATH,"//a[@id='off']")
+#clickShopping.click()
+
+#clickDelete = browser_instance.find_element(By.XPATH,"//tbody/tr[2]/td[1]/a[1]")
+#clickDelete.click()
+
+#clicklogOut = browser_instance.find_element(By.XPATH,"//a[normalize-space()='Logout']")
+#clicklogOut.click()
+
+
+#browser_instance.get("https://localhost:44374/Yeni%20klas%c3%b6r/frontend-rneklibrary-jssizkod/index.aspx")
+#contactUsername=browser_instance.find_element(By.XPATH,"//input[@id='nameSurname']")
+#contactUsername.send_keys("emptypudding")
+
+#contactEmail=browser_instance.find_element(By.XPATH,"//input[@id='email']")
+#contactEmail.send_keys("mail")
+
+#contactSubject=browser_instance.find_element(By.XPATH,"//input[@id='subject']")
+#contactSubject.send_keys("Can't add book to page")
+
+#time.sleep(3)
+
+#contactBody=browser_instance.find_element(By.XPATH,"//textarea[@id='message']")
+#contactBody.send_keys("Hello i have some problems with selecting an book")
+
+#time.sleep(5)
+
+#clickSubmit = browser_instance.find_element(By.XPATH,"//input[@value='Submit']")
+#clickSubmit.click()
+
+
+
+time.sleep(30)
